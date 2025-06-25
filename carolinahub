@@ -19,13 +19,13 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Username = LocalPlayer.Name  
 
 -- // Show Notification on Script Load
-Library:Notify("" .. Username .. " 👏", 5)
+Library:Notify("" .. Username .. " Hello", 5)
 task.wait(1) 
 Library:Notify("  ", 5)
 
 -- // Create Main UI Window
 local Window = Library:CreateWindow({
-    Title = 'Fundsware',
+    Title = 'Phillies Menu',
     Center = true,
     AutoShow = true,
     TabPadding = 8,
@@ -43,7 +43,7 @@ local Tabs = {
 }
 
 -- // Create Groupboxes
-local DupeBox = Tabs.Main:AddLeftGroupbox("Dupe")
+local DupeBox = Tabs.Main:AddLeftGroupbox("Dupe/Inf Money")
 local QuickShop = Tabs.Main:AddLeftGroupbox('Quick Shop')
 local Tele = Tabs.Main:AddLeftGroupbox('Teleport')
 
@@ -748,6 +748,10 @@ DupeBox:AddButton('Safe Dupe', function()
     else
         getgenv().SwimMethod = false 
     end
+end)
+
+DupeBox:AddButton('Inf Money ( FOLLOW TUT )', function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Turtle-Brand/Turtle-Spy/main/source.lua", true))()
 end)
 
 QuickShop:AddButton('Buy Shiesty', function()
